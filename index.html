@@ -16,7 +16,7 @@
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-16 sm:h-20">
                 <!-- Logo -->
-                <a href="#" class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+                <a href="#" class="flex items-center gap-2 sm:gap-3 flex-shrink-0 relative z-[100]">
                     <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg sm:rounded-xl flex items-center justify-center">
                         <i class="fas fa-fire text-white text-lg sm:text-xl"></i>
                     </div>
@@ -26,58 +26,114 @@
                     </div>
                 </a>
 
-                <!-- Desktop Nav -->
-                <nav class="hidden lg:flex items-center gap-8">
-                    <a href="#services" class="text-gray-600 hover:text-orange-500 transition">Услуги</a>
-                    <a href="#quiz" class="text-gray-600 hover:text-orange-500 transition">Расчёт</a>
-                    <a href="#advantages" class="text-gray-600 hover:text-orange-500 transition">Преимущества</a>
-                    <a href="#steps" class="text-gray-600 hover:text-orange-500 transition">Этапы работ</a>
-                    <a href="#portfolio" class="text-gray-600 hover:text-orange-500 transition">Наши работы</a>
-                    <a href="#reviews" class="text-gray-600 hover:text-orange-500 transition">Отзывы</a>
-                    <a href="#contacts" class="text-gray-600 hover:text-orange-500 transition">Контакты</a>
+                <!-- Desktop Nav Premium -->
+                <nav class="nav-desktop-premium hidden lg:flex items-center gap-8">
+                    <a href="#services" class="nav-link-premium">
+                        <span class="nav-glow"></span>
+                        Услуги
+                    </a>
+                    <a href="#quiz" class="nav-link-premium">
+                        <span class="nav-glow"></span>
+                        Расчёт
+                    </a>
+                    <a href="#advantages" class="nav-link-premium">
+                        <span class="nav-glow"></span>
+                        Преимущества
+                    </a>
+                    <a href="#steps" class="nav-link-premium">
+                        <span class="nav-glow"></span>
+                        Этапы работ
+                    </a>
+                    <a href="#portfolio" class="nav-link-premium">
+                        <span class="nav-glow"></span>
+                        Наши работы
+                    </a>
+                    <a href="#reviews" class="nav-link-premium">
+                        <span class="nav-glow"></span>
+                        Отзывы
+                    </a>
+                    <a href="#contacts" class="nav-link-premium">
+                        <span class="nav-glow"></span>
+                        Контакты
+                    </a>
                 </nav>
 
                 <!-- Phone & CTA -->
-                <div class="hidden md:flex items-center gap-6">
+                <div class="hidden lg:flex items-center gap-6">
                     <div class="text-right">
                         <a href="tel:+74951234567" class="text-xl font-bold text-gray-800 hover:text-orange-500 transition">
                             +7 (495) 123-45-67
                         </a>
                         <p class="text-sm text-gray-500">Ежедневно с 8:00 до 20:00</p>
                     </div>
-                    <button onclick="openModal()" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300 hover:-translate-y-0.5">
+                    <button onclick="openModal()" class="header-cta-premium bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300 hover:-translate-y-0.5">
                         Заказать звонок
                     </button>
                 </div>
 
-                <!-- Mobile Menu Button -->
-                <button id="mobileMenuBtn" class="md:hidden text-gray-600 text-2xl w-10 h-10 flex items-center justify-center">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden lg:hidden bg-white border-t">
-            <div class="container mx-auto px-4 py-4">
-                <nav class="flex flex-col gap-4">
-                    <a href="#services" class="text-gray-600 hover:text-orange-500 transition py-2">Услуги</a>
-                    <a href="#quiz" class="text-gray-600 hover:text-orange-500 transition py-2">Расчёт</a>
-                    <a href="#advantages" class="text-gray-600 hover:text-orange-500 transition py-2">Преимущества</a>
-                    <a href="#steps" class="text-gray-600 hover:text-orange-500 transition py-2">Этапы работ</a>
-                    <a href="#portfolio" class="text-gray-600 hover:text-orange-500 transition py-2">Наши работы</a>
-                    <a href="#reviews" class="text-gray-600 hover:text-orange-500 transition py-2">Отзывы</a>
-                    <a href="#contacts" class="text-gray-600 hover:text-orange-500 transition py-2">Контакты</a>
-                </nav>
-                <div class="mt-4 pt-4 border-t">
-                    <a href="tel:+74951234567" class="text-xl font-bold text-gray-800">+7 (495) 123-45-67</a>
-                    <button onclick="openModal()" class="w-full mt-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-xl font-semibold">
-                        Заказать звонок
-                    </button>
+                <!-- Mobile Menu Button Premium -->
+                <div id="mobileMenuBtn" class="hamburger-premium lg:hidden">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- Mobile Menu Premium (Full Screen Overlay) -->
+    <div id="mobileMenu" class="mobile-menu-premium">
+        <!-- Floating Orbs -->
+        <div class="menu-orb menu-orb-1"></div>
+        <div class="menu-orb menu-orb-2"></div>
+        <div class="menu-orb menu-orb-3"></div>
+
+        <!-- Navigation Links -->
+        <nav class="relative z-10 flex flex-col items-center">
+            <a href="#services" class="mobile-nav-link">
+                <span class="link-number">01</span>
+                Услуги
+            </a>
+            <a href="#quiz" class="mobile-nav-link">
+                <span class="link-number">02</span>
+                Расчёт
+            </a>
+            <a href="#advantages" class="mobile-nav-link">
+                <span class="link-number">03</span>
+                Преимущества
+            </a>
+            <a href="#steps" class="mobile-nav-link">
+                <span class="link-number">04</span>
+                Этапы работ
+            </a>
+            <a href="#portfolio" class="mobile-nav-link">
+                <span class="link-number">05</span>
+                Наши работы
+            </a>
+            <a href="#reviews" class="mobile-nav-link">
+                <span class="link-number">06</span>
+                Отзывы
+            </a>
+            <a href="#contacts" class="mobile-nav-link">
+                <span class="link-number">07</span>
+                Контакты
+            </a>
+        </nav>
+
+        <!-- Contact Info -->
+        <div class="mobile-menu-contact">
+            <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+            <p>Ежедневно с 8:00 до 20:00</p>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="mobile-menu-cta">
+            <button onclick="openModal(); closeMobileMenu();">
+                <i class="fas fa-phone-alt mr-2"></i>
+                Заказать звонок
+            </button>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center pt-24 sm:pt-28 md:pt-20 pb-8 overflow-hidden">
@@ -1245,8 +1301,8 @@
         <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal()"></div>
         <div class="flex items-center justify-center min-h-screen p-3 sm:p-4">
             <div class="relative bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 max-w-md w-full shadow-2xl transform scale-95 opacity-0 transition-all duration-300" id="modalContent">
-                <button onclick="closeModal()" class="absolute top-3 right-3 sm:top-4 sm:right-4 text-gray-400 hover:text-gray-600 transition">
-                    <i class="fas fa-times text-lg sm:text-xl"></i>
+                <button onclick="closeModal()" class="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 hover:text-gray-700 transition z-10">
+                    <i class="fas fa-times text-sm sm:text-base"></i>
                 </button>
 
                 <div class="text-center mb-4 sm:mb-6">
@@ -1283,6 +1339,9 @@
         <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeSuccessModal()"></div>
         <div class="flex items-center justify-center min-h-screen p-3 sm:p-4">
             <div class="relative bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 max-w-md w-full shadow-2xl text-center" id="successModalContent">
+                <button onclick="closeSuccessModal()" class="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 hover:text-gray-700 transition z-10">
+                    <i class="fas fa-times text-sm sm:text-base"></i>
+                </button>
                 <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
                     <i class="fas fa-check text-white text-2xl sm:text-3xl"></i>
                 </div>

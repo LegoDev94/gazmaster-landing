@@ -7,33 +7,71 @@ const TELEGRAM_BOT_TOKEN = '8446823734:AAFzJPrKkn8y6djjsH81OcUnXq6T666fVjA';
 const TELEGRAM_CHAT_ID = '-5083519453'; // Групповой чат для заявок
 
 // ==========================================
-// Mobile Menu
+// Premium Mobile Menu
 // ==========================================
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 
+function openMobileMenu() {
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.classList.add('active');
+        mobileMenu.classList.add('active');
+        document.body.classList.add('menu-open');
+    }
+}
+
+function closeMobileMenu() {
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    }
+}
+
 if (mobileMenuBtn && mobileMenu) {
+    // Toggle menu on button click
     mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        const icon = mobileMenuBtn.querySelector('i');
-        if (mobileMenu.classList.contains('hidden')) {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
+        if (mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
         } else {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
+            openMobileMenu();
         }
     });
 
     // Close mobile menu when clicking on links
     mobileMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            mobileMenuBtn.querySelector('i').classList.remove('fa-times');
-            mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+            closeMobileMenu();
         });
     });
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+        }
+    });
 }
+
+// ==========================================
+// Desktop Navigation - Magnetic Effect
+// ==========================================
+const navLinks = document.querySelectorAll('.nav-link-premium');
+
+navLinks.forEach(link => {
+    link.addEventListener('mousemove', (e) => {
+        const rect = link.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        // Subtle magnetic pull effect
+        link.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+    });
+
+    link.addEventListener('mouseleave', () => {
+        link.style.transform = 'translate(0, 0)';
+    });
+});
 
 // ==========================================
 // Header Scroll Effect
