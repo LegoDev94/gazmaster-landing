@@ -1,0 +1,188 @@
+backend:
+  name: github
+  repo: LegoDev94/gazmaster-landing
+  branch: gh-pages
+  base_url: https://decap-oauth.netlify.app
+
+media_folder: "images"
+public_folder: "/images"
+
+locale: "ru"
+
+collections:
+  # Настройки сайта
+  - name: "settings"
+    label: "Настройки сайта"
+    files:
+      - name: "site"
+        label: "Основные настройки"
+        file: "_data/settings.json"
+        fields:
+          - label: "Название компании"
+            name: "company_name"
+            widget: "string"
+            default: "ГазМастер"
+          - label: "Телефон"
+            name: "phone"
+            widget: "string"
+            default: "+7 (495) 123-45-67"
+          - label: "Время работы"
+            name: "work_hours"
+            widget: "string"
+            default: "Ежедневно с 8:00 до 20:00"
+          - label: "Email"
+            name: "email"
+            widget: "string"
+            default: "info@gazmaster.ru"
+          - label: "Адрес"
+            name: "address"
+            widget: "string"
+            default: "г. Москва, ул. Примерная, д. 1"
+
+      - name: "seo"
+        label: "SEO настройки"
+        file: "_data/seo.json"
+        fields:
+          - label: "Title (заголовок страницы)"
+            name: "title"
+            widget: "string"
+            default: "ГазМастер - Газификация и подключение газа под ключ"
+          - label: "Description (описание)"
+            name: "description"
+            widget: "text"
+            default: "Профессиональная газификация частных домов. Подключение газа под ключ за 30 дней. Лицензированные специалисты. Гарантия 5 лет."
+          - label: "Keywords (ключевые слова)"
+            name: "keywords"
+            widget: "string"
+            required: false
+
+  # Главный экран
+  - name: "hero"
+    label: "Главный экран"
+    files:
+      - name: "hero"
+        label: "Контент главного экрана"
+        file: "_data/hero.json"
+        fields:
+          - label: "Заголовок"
+            name: "title"
+            widget: "string"
+            default: "Газификация вашего дома"
+          - label: "Подзаголовок (выделенный)"
+            name: "title_highlight"
+            widget: "string"
+            default: "под ключ"
+          - label: "Описание"
+            name: "description"
+            widget: "text"
+          - label: "Бейдж (лицензия)"
+            name: "badge"
+            widget: "string"
+            default: "Лицензированная компания с 2010 года"
+          - label: "Фоновое изображение"
+            name: "background_image"
+            widget: "image"
+            required: false
+
+  # Услуги
+  - name: "services"
+    label: "Услуги"
+    folder: "_data/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Название услуги"
+        name: "title"
+        widget: "string"
+      - label: "Описание"
+        name: "description"
+        widget: "text"
+      - label: "Цена (от)"
+        name: "price"
+        widget: "string"
+      - label: "Иконка (FontAwesome класс)"
+        name: "icon"
+        widget: "string"
+        default: "fas fa-home"
+      - label: "Цвет (tailwind)"
+        name: "color"
+        widget: "select"
+        options:
+          - { label: "Оранжевый", value: "orange" }
+          - { label: "Синий", value: "blue" }
+          - { label: "Зелёный", value: "green" }
+          - { label: "Фиолетовый", value: "purple" }
+          - { label: "Красный", value: "red" }
+          - { label: "Голубой", value: "cyan" }
+      - label: "Порядок отображения"
+        name: "order"
+        widget: "number"
+        default: 1
+
+  # Преимущества
+  - name: "advantages"
+    label: "Преимущества"
+    folder: "_data/advantages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Заголовок"
+        name: "title"
+        widget: "string"
+      - label: "Описание"
+        name: "description"
+        widget: "text"
+      - label: "Иконка (FontAwesome класс)"
+        name: "icon"
+        widget: "string"
+      - label: "Порядок"
+        name: "order"
+        widget: "number"
+
+  # Отзывы
+  - name: "reviews"
+    label: "Отзывы"
+    folder: "_data/reviews"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Имя клиента"
+        name: "name"
+        widget: "string"
+      - label: "Локация"
+        name: "location"
+        widget: "string"
+      - label: "Текст отзыва"
+        name: "text"
+        widget: "text"
+      - label: "Рейтинг (1-5)"
+        name: "rating"
+        widget: "number"
+        min: 1
+        max: 5
+        default: 5
+      - label: "Фото клиента"
+        name: "photo"
+        widget: "image"
+        required: false
+
+  # Галерея работ
+  - name: "gallery"
+    label: "Галерея работ"
+    folder: "_data/gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Название"
+        name: "title"
+        widget: "string"
+      - label: "Изображение"
+        name: "image"
+        widget: "image"
+      - label: "Описание"
+        name: "description"
+        widget: "string"
+        required: false
+      - label: "Порядок"
+        name: "order"
+        widget: "number"
