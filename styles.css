@@ -911,8 +911,7 @@ img {
 }
 
 .btn-right {
-    display: flex;
-    justify-content: flex-end;
+    margin-left: auto;
 }
 
 /* ==========================================
