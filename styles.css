@@ -895,6 +895,19 @@ img {
 }
 
 /* ==========================================
+   SERVICE CARD FOOTER
+   ========================================== */
+.service-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid #f3f4f6;
+}
+
+/* ==========================================
    PREMIUM NAVIGATION MENU
    ========================================== */
 
