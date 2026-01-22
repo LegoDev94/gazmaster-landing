@@ -116,6 +116,202 @@ header.scrolled {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* ==========================================
+   BLUE HEADER DESIGN
+   ========================================== */
+.header-blue {
+    background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 50%, #22d3ee 100%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-blue.scrolled {
+    background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 50%, #22d3ee 100%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Navigation Links - Blue Theme */
+.nav-link-blue {
+    color: white;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link-blue::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fbbf24;
+    transition: width 0.3s ease;
+}
+
+.nav-link-blue:hover {
+    color: #fde047;
+}
+
+.nav-link-blue:hover::after {
+    width: 100%;
+}
+
+/* Hamburger Menu - Blue Theme */
+.hamburger-blue {
+    width: 28px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.hamburger-blue span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #fbbf24;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-blue.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger-blue.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-blue.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Menu - Blue Theme */
+.mobile-menu-blue {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 50%, #22d3ee 100%);
+    z-index: 90;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.mobile-menu-blue.active {
+    transform: translateX(0);
+}
+
+.mobile-menu-close-blue {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.mobile-menu-close-blue:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+.mobile-menu-content-blue {
+    height: 100%;
+    overflow-y: auto;
+    padding: 5rem 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu-nav-blue {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.mobile-nav-link-blue {
+    display: block;
+    padding: 1rem 1.25rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+    transform: translateX(20px);
+    opacity: 0;
+}
+
+.mobile-menu-blue.active .mobile-nav-link-blue {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.mobile-menu-blue.active .mobile-nav-link-blue:nth-child(1) { transition-delay: 0.05s; }
+.mobile-menu-blue.active .mobile-nav-link-blue:nth-child(2) { transition-delay: 0.1s; }
+.mobile-menu-blue.active .mobile-nav-link-blue:nth-child(3) { transition-delay: 0.15s; }
+.mobile-menu-blue.active .mobile-nav-link-blue:nth-child(4) { transition-delay: 0.2s; }
+.mobile-menu-blue.active .mobile-nav-link-blue:nth-child(5) { transition-delay: 0.25s; }
+
+.mobile-nav-link-blue:hover,
+.mobile-nav-link-blue:active {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fde047;
+}
+
+.mobile-menu-contact-blue {
+    margin-top: auto;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s ease 0.3s;
+}
+
+.mobile-menu-blue.active .mobile-menu-contact-blue {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.mobile-menu-phone-blue {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fbbf24;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu-phone-blue i {
+    color: #fbbf24;
+}
+
+.mobile-menu-phone-blue:hover {
+    color: #fde047;
+}
+
 /* Mobile Header Height */
 @media (max-width: 640px) {
     header .h-16 {

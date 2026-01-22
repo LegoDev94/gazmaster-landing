@@ -13,67 +13,32 @@
 </head>
 <body class="font-inter antialiased">
     <!-- Header -->
-    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+    <header class="header-blue fixed w-full top-0 z-50">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-16 sm:h-20">
                 <!-- Logo -->
-                <a href="#" class="flex items-center gap-2 sm:gap-3 flex-shrink-0 relative z-[100]">
-                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg sm:rounded-xl flex items-center justify-center">
-                        <i class="fas fa-fire text-white text-lg sm:text-xl"></i>
-                    </div>
-                    <div>
-                        <span class="text-base sm:text-xl font-bold text-gray-800">ГазМастер</span>
-                        <p class="text-[10px] sm:text-xs text-gray-500 hidden xs:block">Газификация под ключ</p>
-                    </div>
+                <a href="#" class="flex items-center flex-shrink-0 relative z-[100]">
+                    <span class="text-xl sm:text-2xl font-bold text-yellow-400 tracking-wide">ГАЗМАСТЕР</span>
                 </a>
 
-                <!-- Desktop Nav Premium -->
-                <nav class="nav-desktop-premium hidden lg:flex items-center gap-8">
-                    <a href="#services" class="nav-link-premium">
-                        <span class="nav-glow"></span>
-                        Услуги
-                    </a>
-                    <a href="#quiz" class="nav-link-premium">
-                        <span class="nav-glow"></span>
-                        Расчёт
-                    </a>
-                    <a href="#advantages" class="nav-link-premium">
-                        <span class="nav-glow"></span>
-                        Преимущества
-                    </a>
-                    <a href="#steps" class="nav-link-premium">
-                        <span class="nav-glow"></span>
-                        Этапы работ
-                    </a>
-                    <a href="#portfolio" class="nav-link-premium">
-                        <span class="nav-glow"></span>
-                        Наши работы
-                    </a>
-                    <a href="#reviews" class="nav-link-premium">
-                        <span class="nav-glow"></span>
-                        Отзывы
-                    </a>
-                    <a href="#contacts" class="nav-link-premium">
-                        <span class="nav-glow"></span>
-                        Контакты
-                    </a>
+                <!-- Desktop Nav -->
+                <nav class="nav-blue hidden lg:flex items-center gap-6 xl:gap-8">
+                    <a href="#services" class="nav-link-blue">СТОИМОСТЬ</a>
+                    <a href="#steps" class="nav-link-blue">ЭТАПЫ</a>
+                    <a href="#advantages" class="nav-link-blue">О КОМПАНИИ</a>
+                    <a href="#portfolio" class="nav-link-blue">РАБОТЫ</a>
+                    <a href="#contacts" class="nav-link-blue">КОНТАКТЫ</a>
                 </nav>
 
-                <!-- Phone & CTA -->
-                <div class="hidden lg:flex items-center gap-6">
-                    <div class="text-right">
-                        <a href="tel:+74951234567" class="text-xl font-bold text-gray-800 hover:text-orange-500 transition">
-                            +7 (495) 123-45-67
-                        </a>
-                        <p class="text-sm text-gray-500">Ежедневно с 8:00 до 20:00</p>
-                    </div>
-                    <button onclick="openModal()" class="header-cta-premium bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300 hover:-translate-y-0.5">
-                        Заказать звонок
-                    </button>
+                <!-- Phone -->
+                <div class="hidden lg:flex items-center">
+                    <a href="tel:+74951234567" class="text-lg xl:text-xl font-bold text-yellow-400 hover:text-yellow-300 transition">
+                        +7 (495) 123-45-67
+                    </a>
                 </div>
 
-                <!-- Mobile Menu Button Premium -->
-                <div id="mobileMenuBtn" class="hamburger-premium lg:hidden">
+                <!-- Mobile Menu Button -->
+                <div id="mobileMenuBtn" class="hamburger-blue lg:hidden">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -82,61 +47,30 @@
         </div>
     </header>
 
-    <!-- Mobile Menu Premium (Full Screen Overlay) -->
-    <div id="mobileMenu" class="mobile-menu-premium">
+    <!-- Mobile Menu (Blue Theme) -->
+    <div id="mobileMenu" class="mobile-menu-blue">
         <!-- Close Button -->
-        <button id="mobileMenuClose" class="mobile-menu-close" onclick="closeMobileMenu()">
+        <button id="mobileMenuClose" class="mobile-menu-close-blue" onclick="closeMobileMenu()">
             <i class="fas fa-times"></i>
         </button>
 
         <!-- Scrollable Content -->
-        <div class="mobile-menu-content">
+        <div class="mobile-menu-content-blue">
             <!-- Navigation Links -->
-            <nav class="mobile-menu-nav">
-                <a href="#services" class="mobile-nav-link">
-                    <i class="fas fa-wrench"></i>
-                    Услуги
-                </a>
-                <a href="#quiz" class="mobile-nav-link">
-                    <i class="fas fa-calculator"></i>
-                    Расчёт стоимости
-                </a>
-                <a href="#advantages" class="mobile-nav-link">
-                    <i class="fas fa-star"></i>
-                    Преимущества
-                </a>
-                <a href="#steps" class="mobile-nav-link">
-                    <i class="fas fa-list-ol"></i>
-                    Этапы работ
-                </a>
-                <a href="#portfolio" class="mobile-nav-link">
-                    <i class="fas fa-images"></i>
-                    Наши работы
-                </a>
-                <a href="#reviews" class="mobile-nav-link">
-                    <i class="fas fa-comments"></i>
-                    Отзывы
-                </a>
-                <a href="#contacts" class="mobile-nav-link">
-                    <i class="fas fa-map-marker-alt"></i>
-                    Контакты
-                </a>
+            <nav class="mobile-menu-nav-blue">
+                <a href="#services" class="mobile-nav-link-blue">СТОИМОСТЬ</a>
+                <a href="#steps" class="mobile-nav-link-blue">ЭТАПЫ</a>
+                <a href="#advantages" class="mobile-nav-link-blue">О КОМПАНИИ</a>
+                <a href="#portfolio" class="mobile-nav-link-blue">РАБОТЫ</a>
+                <a href="#contacts" class="mobile-nav-link-blue">КОНТАКТЫ</a>
             </nav>
 
             <!-- Contact Info -->
-            <div class="mobile-menu-contact">
-                <a href="tel:+74951234567" class="mobile-menu-phone">
+            <div class="mobile-menu-contact-blue">
+                <a href="tel:+74951234567" class="mobile-menu-phone-blue">
                     <i class="fas fa-phone-alt"></i>
                     +7 (495) 123-45-67
                 </a>
-                <p>Ежедневно с 8:00 до 20:00</p>
-            </div>
-
-            <!-- CTA Button -->
-            <div class="mobile-menu-cta">
-                <button onclick="openModal(); closeMobileMenu();">
-                    Заказать звонок
-                </button>
             </div>
         </div>
     </div>
