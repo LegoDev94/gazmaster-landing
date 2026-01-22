@@ -7,18 +7,18 @@
     <meta name="description" content="Профессиональная газификация частных домов. Подключение газа под ключ за 30 дней. Лицензированные специалисты. Гарантия 5 лет.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
-<body class="font-inter antialiased">
+<body class="antialiased" style="font-family: 'Roboto', sans-serif;">
     <!-- Header -->
     <header class="header-blue fixed w-full top-0 z-50">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-16 sm:h-20">
                 <!-- Logo -->
                 <a href="#" class="flex items-center flex-shrink-0 relative z-[100]">
-                    <span class="text-xl sm:text-2xl font-bold text-yellow-400 tracking-wide">ГАЗМАСТЕР</span>
+                    <span class="text-xl sm:text-2xl font-bold text-white tracking-wide">ГАЗМАСТЕР</span>
                 </a>
 
                 <!-- Desktop Nav -->
@@ -31,8 +31,9 @@
                 </nav>
 
                 <!-- Phone -->
-                <div class="hidden lg:flex items-center">
-                    <a href="tel:+74951234567" class="text-lg xl:text-xl font-bold text-yellow-400 hover:text-yellow-300 transition">
+                <div class="hidden lg:flex items-center gap-2">
+                    <i class="fas fa-phone-alt text-orange-400"></i>
+                    <a href="tel:+74951234567" class="text-lg xl:text-xl font-bold text-white hover:opacity-80 transition">
                         +7 (495) 123-45-67
                     </a>
                 </div>
@@ -76,132 +77,117 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center pt-24 sm:pt-28 md:pt-20 pb-8 overflow-hidden">
+    <section class="hero-blue relative min-h-screen flex items-center pt-20 pb-0 overflow-hidden">
         <!-- Background -->
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920" alt="Газификация дома" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/80 to-gray-900/40"></div>
+            <div class="absolute inset-0 bg-[#0e65a0]/85"></div>
         </div>
 
-        <!-- Floating Elements -->
-        <div class="absolute top-40 right-20 w-72 h-72 bg-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div class="absolute bottom-20 left-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="text-white">
-                    <div class="inline-flex items-center gap-2 bg-orange-500/20 backdrop-blur-sm border border-orange-500/30 text-orange-300 px-4 py-2 rounded-full text-sm mb-6">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>Лицензированная компания с 2010 года</span>
+        <div class="container mx-auto px-4 relative z-10 py-12">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+                <!-- Left Content -->
+                <div class="text-white pt-4">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="https://img.icons8.com/color/48/gas-industry.png" alt="gas" class="w-10 h-10">
+                        <span class="text-lg">Газификация коммерческих объектов и</span>
                     </div>
 
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 sm:mb-6">
-                        Газификация вашего дома
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600"> под ключ</span>
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-6">
+                        частного жилья в МСК И МО <span class="text-yellow-400">"ПОД КЛЮЧ"</span>:
                     </h1>
 
-                    <p class="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 leading-relaxed">
-                        Выполним полный комплекс работ по подключению газа: от проектирования до сдачи в эксплуатацию. Работаем в Москве и области.
-                    </p>
-
-                    <div class="flex flex-wrap gap-3 sm:gap-6 mb-6 sm:mb-10">
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                                <i class="fas fa-clock text-orange-400 text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="font-bold text-2xl">от 14 дней</p>
-                                <p class="text-gray-400 text-sm">срок выполнения</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                                <i class="fas fa-certificate text-orange-400 text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="font-bold text-2xl">5 лет</p>
-                                <p class="text-gray-400 text-sm">гарантия на работы</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                                <i class="fas fa-users text-orange-400 text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="font-bold text-2xl">2500+</p>
-                                <p class="text-gray-400 text-sm">довольных клиентов</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
-                        <button onclick="openModal()" class="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:shadow-2xl hover:shadow-orange-500/40 transition-all duration-300 hover:-translate-y-1">
-                            Рассчитать стоимость
-                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
-                        </button>
-                        <a href="tel:+74951234567" class="flex items-center justify-center gap-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-white/20 transition-all">
-                            <i class="fas fa-phone-alt"></i>
-                            Позвонить нам
-                        </a>
-                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-square text-yellow-400 mt-1"></i>
+                            <span>Газифицируем объекты любой сложности</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-square text-yellow-400 mt-1"></i>
+                            <span>Наши сотрудники имеют профильное образование и опыт работы в Мособлгазе и Мосгазе</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-square text-yellow-400 mt-1"></i>
+                            <span>Разработаем и смонтируем систему отопления</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-square text-yellow-400 mt-1"></i>
+                            <span>Официальный договор с поэтапной оплатой по безналичному расчету</span>
+                        </li>
+                    </ul>
                 </div>
 
                 <!-- Hero Form -->
-                <div class="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-2xl">
-                    <div class="text-center mb-4 sm:mb-6">
-                        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Получите бесплатную консультацию</h3>
-                        <p class="text-sm sm:text-base text-gray-500">Оставьте заявку и мы перезвоним вам в течение 15 минут</p>
-                    </div>
+                <div class="bg-white/95 backdrop-blur rounded-lg p-6 sm:p-8 shadow-2xl">
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-1 uppercase">Заявка на расчет проекта</h3>
+                    <p class="text-sm text-gray-500 mb-4">Контактное лицо *</p>
 
                     <form id="heroForm" class="space-y-4">
                         <div>
-                            <input type="text" name="name" placeholder="Ваше имя" required
-                                class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
+                            <input type="text" name="name" placeholder="" required
+                                class="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:border-[#0e65a0] transition">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm text-gray-600 mb-1">Телефон *</label>
+                                <input type="tel" name="phone" placeholder="" required
+                                    class="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:border-[#0e65a0] transition">
+                            </div>
+                            <div>
+                                <label class="block text-sm text-gray-600 mb-1">Почта</label>
+                                <input type="email" name="email" placeholder=""
+                                    class="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:border-[#0e65a0] transition">
+                            </div>
                         </div>
                         <div>
-                            <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required
-                                class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
+                            <label class="block text-sm text-gray-600 mb-1">Сообщение</label>
+                            <textarea name="message" rows="3"
+                                class="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:border-[#0e65a0] transition resize-none"></textarea>
                         </div>
-                        <div>
-                            <select name="service" class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition text-gray-600">
-                                <option value="">Выберите услугу</option>
-                                <option value="Газификация под ключ">Газификация под ключ</option>
-                                <option value="Подключение газа">Подключение газа</option>
-                                <option value="Проектирование">Проектирование газоснабжения</option>
-                                <option value="Монтаж оборудования">Монтаж газового оборудования</option>
-                                <option value="Обслуживание">Техническое обслуживание</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-4 rounded-xl font-bold text-lg hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300 hover:-translate-y-0.5">
-                            Получить консультацию
+                        <button type="submit" class="w-full bg-[#fba626] hover:bg-[#e09520] text-white py-4 rounded font-bold text-base uppercase transition-all duration-300">
+                            Связаться с нами
                         </button>
-                        <p class="text-center text-sm text-gray-400">
-                            Нажимая кнопку, вы соглашаетесь с <a href="#" class="text-orange-500 hover:underline">политикой конфиденциальности</a>
-                        </p>
-                    </form>
-
-                    <div class="mt-6 pt-6 border-t border-gray-100">
-                        <div class="flex items-center justify-center gap-4 text-sm text-gray-500">
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-green-500"></i>
-                                <span>Бесплатный выезд</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-green-500"></i>
-                                <span>Без предоплаты</span>
-                            </div>
+                        <div class="flex items-start gap-2 text-xs text-gray-500">
+                            <input type="checkbox" id="privacy" class="mt-1" checked>
+                            <label for="privacy">Я принимаю соглашение сайта об обработке персональных данных</label>
                         </div>
+                        <!-- reCAPTCHA placeholder -->
+                        <div class="flex items-center gap-3 p-3 border border-gray-300 rounded bg-gray-50">
+                            <input type="checkbox" id="recaptcha" class="w-5 h-5">
+                            <label for="recaptcha" class="text-sm text-gray-600">Я не робот</label>
+                            <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA" class="w-8 h-8 ml-auto">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Info Bar -->
+        <div class="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur py-4 z-20">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                    <div class="flex items-center justify-center gap-3">
+                        <div class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
+                            <i class="fas fa-award text-white text-xl"></i>
+                        </div>
+                        <span class="text-sm text-gray-700">Являемся рекомендованной компанией по газификации</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-3">
+                        <div class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-white text-xl"></i>
+                        </div>
+                        <span class="text-sm text-gray-700">Гарантийные обязательства на все оборудование и работы</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-3">
+                        <div class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user-tie text-white text-xl"></i>
+                        </div>
+                        <span class="text-sm text-gray-700">Все работы выполняют мастера с многолетним опытом работы</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <a href="#services" class="text-white/50 hover:text-white transition">
-                <i class="fas fa-chevron-down text-2xl"></i>
-            </a>
-        </div>
     </section>
 
     <!-- Services Section -->

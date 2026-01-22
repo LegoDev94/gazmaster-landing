@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
 }
 
@@ -117,46 +117,32 @@ header.scrolled {
 }
 
 /* ==========================================
-   BLUE HEADER DESIGN
+   BLUE HEADER DESIGN (Reference: otoplenie-gaz.ru)
    ========================================== */
 .header-blue {
-    background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 50%, #22d3ee 100%);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: #0e65a0;
+    box-shadow: none;
 }
 
 .header-blue.scrolled {
-    background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 50%, #22d3ee 100%);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    background: #0e65a0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Navigation Links - Blue Theme */
 .nav-link-blue {
     color: white;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.875rem;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     padding: 0.5rem 0;
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease;
     position: relative;
 }
 
-.nav-link-blue::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #fbbf24;
-    transition: width 0.3s ease;
-}
-
 .nav-link-blue:hover {
-    color: #fde047;
-}
-
-.nav-link-blue:hover::after {
-    width: 100%;
+    opacity: 0.8;
 }
 
 /* Hamburger Menu - Blue Theme */
@@ -174,9 +160,9 @@ header.scrolled {
 .hamburger-blue span {
     display: block;
     width: 100%;
-    height: 3px;
-    background: #fbbf24;
-    border-radius: 3px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
     transition: all 0.3s ease;
 }
 
@@ -200,7 +186,7 @@ header.scrolled {
     width: 100%;
     height: 100vh;
     height: 100dvh;
-    background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 50%, #22d3ee 100%);
+    background: #0e65a0;
     z-index: 90;
     transform: translateX(100%);
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -300,16 +286,16 @@ header.scrolled {
     gap: 0.5rem;
     font-size: 1.25rem;
     font-weight: 700;
-    color: #fbbf24;
-    transition: color 0.3s ease;
+    color: white;
+    transition: opacity 0.3s ease;
 }
 
 .mobile-menu-phone-blue i {
-    color: #fbbf24;
+    color: #fba626;
 }
 
 .mobile-menu-phone-blue:hover {
-    color: #fde047;
+    opacity: 0.8;
 }
 
 /* Mobile Header Height */
