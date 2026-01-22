@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ГазМастер - Газификация и подключение газа под ключ</title>
+    <meta name="description" content="Профессиональная газификация частных домов. Подключение газа под ключ за 30 дней. Лицензированные специалисты. Гарантия 5 лет.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-inter antialiased">
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg sm:rounded-xl flex items-center justify-center">
+                        <i class="fas fa-fire text-white text-lg sm:text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-base sm:text-xl font-bold text-gray-800">ГазМастер</span>
+                        <p class="text-[10px] sm:text-xs text-gray-500 hidden xs:block">Газификация под ключ</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="#services" class="text-gray-600 hover:text-orange-500 transition">Услуги</a>
+                    <a href="#quiz" class="text-gray-600 hover:text-orange-500 transition">Расчёт</a>
+                    <a href="#advantages" class="text-gray-600 hover:text-orange-500 transition">Преимущества</a>
+                    <a href="#steps" class="text-gray-600 hover:text-orange-500 transition">Этапы работ</a>
+                    <a href="#portfolio" class="text-gray-600 hover:text-orange-500 transition">Наши работы</a>
+                    <a href="#reviews" class="text-gray-600 hover:text-orange-500 transition">Отзывы</a>
+                    <a href="#contacts" class="text-gray-600 hover:text-orange-500 transition">Контакты</a>
+                </nav>
+
+                <!-- Phone & CTA -->
+                <div class="hidden md:flex items-center gap-6">
+                    <div class="text-right">
+                        <a href="tel:+74951234567" class="text-xl font-bold text-gray-800 hover:text-orange-500 transition">
+                            +7 (495) 123-45-67
+                        </a>
+                        <p class="text-sm text-gray-500">Ежедневно с 8:00 до 20:00</p>
+                    </div>
+                    <button onclick="openModal()" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300 hover:-translate-y-0.5">
+                        Заказать звонок
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-gray-600 text-2xl w-10 h-10 flex items-center justify-center">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-4">
+                <nav class="flex flex-col gap-4">
+                    <a href="#services" class="text-gray-600 hover:text-orange-500 transition py-2">Услуги</a>
+                    <a href="#quiz" class="text-gray-600 hover:text-orange-500 transition py-2">Расчёт</a>
+                    <a href="#advantages" class="text-gray-600 hover:text-orange-500 transition py-2">Преимущества</a>
+                    <a href="#steps" class="text-gray-600 hover:text-orange-500 transition py-2">Этапы работ</a>
+                    <a href="#portfolio" class="text-gray-600 hover:text-orange-500 transition py-2">Наши работы</a>
+                    <a href="#reviews" class="text-gray-600 hover:text-orange-500 transition py-2">Отзывы</a>
+                    <a href="#contacts" class="text-gray-600 hover:text-orange-500 transition py-2">Контакты</a>
+                </nav>
+                <div class="mt-4 pt-4 border-t">
+                    <a href="tel:+74951234567" class="text-xl font-bold text-gray-800">+7 (495) 123-45-67</a>
+                    <button onclick="openModal()" class="w-full mt-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-xl font-semibold">
+                        Заказать звонок
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-24 sm:pt-28 md:pt-20 pb-8 overflow-hidden">
+        <!-- Background -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920" alt="Газификация дома" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/80 to-gray-900/40"></div>
+        </div>
+
+        <!-- Floating Elements -->
+        <div class="absolute top-40 right-20 w-72 h-72 bg-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-20 left-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <div class="inline-flex items-center gap-2 bg-orange-500/20 backdrop-blur-sm border border-orange-500/30 text-orange-300 px-4 py-2 rounded-full text-sm mb-6">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Лицензированная компания с 2010 года</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 sm:mb-6">
+                        Газификация вашего дома
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600"> под ключ</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 leading-relaxed">
+                        Выполним полный комплекс работ по подключению газа: от проектирования до сдачи в эксплуатацию. Работаем в Москве и области.
+                    </p>
+
+                    <div class="flex flex-wrap gap-3 sm:gap-6 mb-6 sm:mb-10">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-clock text-orange-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-2xl">от 14 дней</p>
+                                <p class="text-gray-400 text-sm">срок выполнения</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-certificate text-orange-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-2xl">5 лет</p>
+                                <p class="text-gray-400 text-sm">гарантия на работы</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-users text-orange-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-2xl">2500+</p>
+                                <p class="text-gray-400 text-sm">довольных клиентов</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
+                        <button onclick="openModal()" class="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:shadow-2xl hover:shadow-orange-500/40 transition-all duration-300 hover:-translate-y-1">
+                            Рассчитать стоимость
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                        <a href="tel:+74951234567" class="flex items-center justify-center gap-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-white/20 transition-all">
+                            <i class="fas fa-phone-alt"></i>
+                            Позвонить нам
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Form -->
+                <div class="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-2xl">
+                    <div class="text-center mb-4 sm:mb-6">
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Получите бесплатную консультацию</h3>
+                        <p class="text-sm sm:text-base text-gray-500">Оставьте заявку и мы перезвоним вам в течение 15 минут</p>
+                    </div>
+
+                    <form id="heroForm" class="space-y-4">
+                        <div>
+                            <input type="text" name="name" placeholder="Ваше имя" required
+                                class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
+                        </div>
+                        <div>
+                            <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required
+                                class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
+                        </div>
+                        <div>
+                            <select name="service" class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition text-gray-600">
+                                <option value="">Выберите услугу</option>
+                                <option value="Газификация под ключ">Газификация под ключ</option>
+                                <option value="Подключение газа">Подключение газа</option>
+                                <option value="Проектирование">Проектирование газоснабжения</option>
+                                <option value="Монтаж оборудования">Монтаж газового оборудования</option>
+                                <option value="Обслуживание">Техническое обслуживание</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-4 rounded-xl font-bold text-lg hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300 hover:-translate-y-0.5">
+                            Получить консультацию
+                        </button>
+                        <p class="text-center text-sm text-gray-400">
+                            Нажимая кнопку, вы соглашаетесь с <a href="#" class="text-orange-500 hover:underline">политикой конфиденциальности</a>
+                        </p>
+                    </form>
+
+                    <div class="mt-6 pt-6 border-t border-gray-100">
+                        <div class="flex items-center justify-center gap-4 text-sm text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Бесплатный выезд</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Без предоплаты</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <a href="#services" class="text-white/50 hover:text-white transition">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-12 sm:py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8 sm:mb-12 md:mb-16">
+                <span class="inline-block bg-orange-100 text-orange-600 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">Наши услуги</span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-3 sm:mb-4">Полный спектр услуг по газификации</h2>
+                <p class="text-sm sm:text-base md:text-xl text-gray-500 max-w-2xl mx-auto px-4">Оказываем все виды работ по подключению газа к частным домам, коттеджам и коммерческим объектам</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                <!-- Service Card 1 -->
+                <div class="group bg-white rounded-xl sm:rounded-2xl p-5 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-home text-white text-xl sm:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">Газификация под ключ</h3>
+                    <p class="text-sm sm:text-base text-gray-500 mb-4 sm:mb-6">Полный цикл работ от получения техусловий до запуска газового оборудования. Все согласования берём на себя.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-orange-500 font-bold">от 150 000 ₽</span>
+                        <button onclick="openModal('Газификация под ключ')" class="text-orange-500 font-semibold hover:text-orange-600 transition flex items-center gap-2">
+                            Подробнее <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="group bg-white rounded-xl sm:rounded-2xl p-5 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-drafting-compass text-white text-xl sm:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">Проектирование</h3>
+                    <p class="text-sm sm:text-base text-gray-500 mb-4 sm:mb-6">Разработка проектной документации для газоснабжения любой сложности с учётом всех норм.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-blue-500 font-bold text-sm sm:text-base">от 25 000 ₽</span>
+                        <button onclick="openModal('Проектирование')" class="text-blue-500 font-semibold hover:text-blue-600 transition flex items-center gap-2 text-sm sm:text-base">
+                            Подробнее <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="group bg-white rounded-xl sm:rounded-2xl p-5 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-tools text-white text-xl sm:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">Монтажные работы</h3>
+                    <p class="text-sm sm:text-base text-gray-500 mb-4 sm:mb-6">Профессиональный монтаж газопроводов, установка котлов и оборудования.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-green-500 font-bold text-sm sm:text-base">от 45 000 ₽</span>
+                        <button onclick="openModal('Монтажные работы')" class="text-green-500 font-semibold hover:text-green-600 transition flex items-center gap-2 text-sm sm:text-base">
+                            Подробнее <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="group bg-white rounded-xl sm:rounded-2xl p-5 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-file-signature text-white text-xl sm:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">Получение ТУ</h3>
+                    <p class="text-sm sm:text-base text-gray-500 mb-4 sm:mb-6">Поможем получить технические условия на подключение быстро и без бюрократии.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-purple-500 font-bold text-sm sm:text-base">от 15 000 ₽</span>
+                        <button onclick="openModal('Получение ТУ')" class="text-purple-500 font-semibold hover:text-purple-600 transition flex items-center gap-2 text-sm sm:text-base">
+                            Подробнее <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="group bg-white rounded-xl sm:rounded-2xl p-5 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-fire-alt text-white text-xl sm:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">Установка котлов</h3>
+                    <p class="text-sm sm:text-base text-gray-500 mb-4 sm:mb-6">Подбор и установка газовых котлов ведущих производителей с настройкой.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-red-500 font-bold text-sm sm:text-base">от 35 000 ₽</span>
+                        <button onclick="openModal('Установка котлов')" class="text-red-500 font-semibold hover:text-red-600 transition flex items-center gap-2 text-sm sm:text-base">
+                            Подробнее <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="group bg-white rounded-xl sm:rounded-2xl p-5 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-cogs text-white text-xl sm:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">Техобслуживание</h3>
+                    <p class="text-sm sm:text-base text-gray-500 mb-4 sm:mb-6">Регулярное обслуживание газового оборудования, диагностика и ремонт.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-cyan-500 font-bold text-sm sm:text-base">от 5 000 ₽</span>
+                        <button onclick="openModal('Техобслуживание')" class="text-cyan-500 font-semibold hover:text-cyan-600 transition flex items-center gap-2 text-sm sm:text-base">
+                            Подробнее <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="py-16 sm:py-20 md:py-28 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920')] bg-cover bg-center opacity-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/50 to-slate-900"></div>
+        </div>
+        <!-- Floating Orbs -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-orange-500/30 rounded-full blur-[100px] animate-pulse"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/20 rounded-full blur-[120px] animate-pulse" style="animation-delay: 1s;"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/10 rounded-full blur-[150px]"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Header -->
+            <div class="text-center mb-10 md:mb-14">
+                <div class="inline-flex items-center gap-2 bg-orange-500/20 backdrop-blur-sm border border-orange-500/30 text-orange-300 px-5 py-2.5 rounded-full text-sm font-medium mb-6">
+                    <i class="fas fa-calculator"></i>
+                    <span>Онлайн-калькулятор</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
+                    Узнайте стоимость газификации<br class="hidden sm:block">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">за 1 минуту</span>
+                </h2>
+                <p class="text-blue-200/80 text-base sm:text-lg max-w-2xl mx-auto">Ответьте на 5 простых вопросов и получите персональный расчёт</p>
+            </div>
+
+            <!-- Quiz Card -->
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white/[0.03] backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl shadow-black/20 overflow-hidden">
+                    <!-- Progress Section -->
+                    <div class="bg-gradient-to-r from-slate-800/50 to-slate-700/50 px-6 py-4 border-b border-white/10">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-white/60 text-sm font-medium">Шаг <span id="currentStep" class="text-orange-400 font-bold">1</span> из 6</span>
+                            <span class="text-white/60 text-sm"><span id="progressPercent" class="text-orange-400 font-bold">17</span>% завершено</span>
+                        </div>
+                        <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                            <div id="quizProgress" class="h-full bg-gradient-to-r from-orange-500 via-orange-400 to-yellow-400 rounded-full transition-all duration-700 ease-out relative" style="width: 17%">
+                                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quiz Content -->
+                    <div class="p-6 sm:p-8 md:p-10">
+                        <!-- Quiz Steps Container -->
+                        <div id="quizSteps">
+                            <!-- Step 1: Distance to gas -->
+                            <div class="quiz-step" data-step="1">
+                                <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-white text-center mb-8 md:mb-10">
+                                    На каком расстоянии находится газопровод?
+                                </h3>
+                                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+                                    <label class="quiz-option cursor-pointer group">
+                                        <input type="radio" name="distance" value="border" class="hidden">
+                                        <div class="quiz-card-new relative bg-slate-800/50 border-2 border-slate-600/50 rounded-2xl p-4 sm:p-5 text-center transition-all duration-300 hover:border-orange-500/50 hover:bg-slate-700/50 h-full flex flex-col justify-center min-h-[110px] sm:min-h-[130px] overflow-hidden">
+                                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-yellow-500/0 group-hover:from-orange-500/10 group-hover:to-yellow-500/10 transition-all duration-300"></div>
+                                            <div class="relative z-10">
+                                                <div class="w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                                                    <i class="fas fa-border-all text-white text-lg"></i>
+                                                </div>
+                                                <div class="text-sm sm:text-base font-bold text-white mb-1">Вдоль границ</div>
+                                                <p class="text-xs text-slate-400">У участка</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="quiz-option cursor-pointer group">
+                                        <input type="radio" name="distance" value="20m" class="hidden">
+                                        <div class="quiz-card-new relative bg-slate-800/50 border-2 border-slate-600/50 rounded-2xl p-4 sm:p-5 text-center transition-all duration-300 hover:border-orange-500/50 hover:bg-slate-700/50 h-full flex flex-col justify-center min-h-[110px] sm:min-h-[130px] overflow-hidden">
+                                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-yellow-500/0 group-hover:from-orange-500/10 group-hover:to-yellow-500/10 transition-all duration-300"></div>
+                                            <div class="relative z-10">
+                                                <div class="text-2xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500 mb-1">&lt;20м</div>
+                                                <p class="text-xs text-slate-400">До 20 метров</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="quiz-option cursor-pointer group">
+                                        <input type="radio" name="distance" value="50m" class="hidden">
+                                        <div class="quiz-card-new relative bg-slate-800/50 border-2 border-slate-600/50 rounded-2xl p-4 sm:p-5 text-center transition-all duration-300 hover:border-orange-500/50 hover:bg-slate-700/50 h-full flex flex-col justify-center min-h-[110px] sm:min-h-[130px] overflow-hidden">
+                                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-yellow-500/0 group-hover:from-orange-500/10 group-hover:to-yellow-500/10 transition-all duration-300"></div>
+                                            <div class="relative z-10">
+                                                <div class="text-2xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 mb-1">&lt;50м</div>
+                                                <p class="text-xs text-slate-400">До 50 метров</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="quiz-option cursor-pointer group">
+                                        <input type="radio" name="distance" value="50plus" class="hidden">
+                                        <div class="quiz-card-new relative bg-slate-800/50 border-2 border-slate-600/50 rounded-2xl p-4 sm:p-5 text-center transition-all duration-300 hover:border-orange-500/50 hover:bg-slate-700/50 h-full flex flex-col justify-center min-h-[110px] sm:min-h-[130px] overflow-hidden">
+                                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-yellow-500/0 group-hover:from-orange-500/10 group-hover:to-yellow-500/10 transition-all duration-300"></div>
+                                            <div class="relative z-10">
+                                                <div class="text-2xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500 mb-1">50+м</div>
+                                                <p class="text-xs text-slate-400">Более 50 метров</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="quiz-option cursor-pointer group">
+                                        <input type="radio" name="distance" value="200plus" class="hidden">
+                                        <div class="quiz-card-new relative bg-slate-800/50 border-2 border-slate-600/50 rounded-2xl p-4 sm:p-5 text-center transition-all duration-300 hover:border-orange-500/50 hover:bg-slate-700/50 h-full flex flex-col justify-center min-h-[110px] sm:min-h-[130px] overflow-hidden">
+                                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-yellow-500/0 group-hover:from-orange-500/10 group-hover:to-yellow-500/10 transition-all duration-300"></div>
+                                            <div class="relative z-10">
+                                                <div class="text-2xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-pink-500 mb-1">200+м</div>
+                                                <p class="text-xs text-slate-400">Более 200 метров</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="quiz-option cursor-pointer group">
+                                        <input type="radio" name="distance" value="unknown" class="hidden">
+                                        <div class="quiz-card-new relative bg-slate-800/50 border-2 border-slate-600/50 rounded-2xl p-4 sm:p-5 text-center transition-all duration-300 hover:border-orange-500/50 hover:bg-slate-700/50 h-full flex flex-col justify-center min-h-[110px] sm:min-h-[130px] overflow-hidden">
+                                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-yellow-500/0 group-hover:from-orange-500/10 group-hover:to-yellow-500/10 transition-all duration-300"></div>
+                                            <div class="relative z-10">
+                                                <div class="w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-slate-500 to-slate-600 rounded-xl flex items-center justify-center">
+                                                    <i class="fas fa-question text-white text-lg"></i>
+                                                </div>
+                                                <p class="text-xs text-slate-400">Не знаю</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Location -->
+                            <div class="quiz-step hidden" data-step="2">
+                                <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-white text-center mb-8 md:mb-10">
+                                    Где расположен ваш объект?
+                                </h3>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+                                    <label class="quiz-option cursor-pointer group">
+                                        <input type="radio" name="location" value="moscow" class="hidden">
+                                        <div class="quiz-card-new relative bg-slate-800/50 border-2 border-slate-600/50 rounded-2xl p-5 sm:p-6 text-center transition-all duration-300 hover:border-orange-500/50 hover:bg-slate-700/50 h-full flex flex-col justify-center min-h-[140px] overflow-hidden">
+                                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-yellow-500/0 group-hover:from-orange-500/10 group-hover:to-yellow-500/10 transition-all duration-300"></div>
+                                            <div class="relative z-10">
+                                                <div class="text-4xl sm:text-5xl mb-3">🏛️</div>
+                                                <p class="font-semibold text-white text-sm sm:text-base">Москва</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="quiz-option cursor-pointer group">
+                                        <input type="radio" name="location" value="new_moscow" class="hidden">
+                                        <div class="quiz-card-new relative bg-slate-800/50 border-2 border-slate-600/50 rounded-2xl p-5 sm:p-6 text-center transition-all duration-300 hover:border-orange-500/50 hover:bg-slate-700/50 h-full flex flex-col justify-center min-h-[140px] overflow-hidden">
+                                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-yellow-500/0 group-hover:from-orange-500/10 group-hover:to-yellow-500/10 transition-all duration-300"></div>
+                                            <div class="relative z-10">
+                                                <div class="text-4xl sm:text-5xl mb-3">🏙️</div>
+                                                <p class="font-semibold text-white text-sm sm:text-base">Новая Москва</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="quiz-option cursor-pointer group">
+                                        <input type="radio" name="location" value="moscow_region" class="hidden">
+                                        <div class="quiz-card-new relative bg-slate-800/50 border-2 border-slate-600/50 rounded-2xl p-5 sm:p-6 text-center transition-all duration-300 hover:border-orange-500/50 hover:bg-slate-700/50 h-full flex flex-col justify-center min-h-[140px] overflow-hidden">
+                                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-yellow-500/0 group-hover:from-orange-500/10 group-hover:to-yellow-500/10 transition-all duration-300"></div>
+                                            <div class="relative z-10">
+                                                <div class="text-4xl sm:text-5xl mb-3">🏡</div>
+                                                <p class="font-semibold text-white text-sm sm:text-base">Подмосковье</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="quiz-option cursor-pointer group">
+                                        <input type="radio" name="location" value="other" class="hidden">
+                                        <div class="quiz-card-new relative bg-slate-800/50 border-2 border-slate-600/50 rounded-2xl p-5 sm:p-6 text-center transition-all duration-300 hover:border-orange-500/50 hover:bg-slate-700/50 h-full flex flex-col justify-center min-h-[140px] overflow-hidden">
+                                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-yellow-500/0 group-hover:from-orange-500/10 group-hover:to-yellow-500/10 transition-all duration-300"></div>
+                                            <div class="relative z-10">
+                                                <div class="text-4xl sm:text-5xl mb-3">🗺️</div>
+                                                <p class="font-semibold text-white text-sm sm:text-base">Другой регион</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: Object type -->
+                            <div class="quiz-step hidden" data-step="3">
+                                <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-white text-center mb-8 md:mb-10">
+                                    Какой тип объекта?
+                                </h3>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+                                    <label class="quiz-option cursor-pointer group">
+                                        <input type="radio" name="object_type" value="house" class="hidden">
+                                        <div class="quiz-card-new relative bg-slate-800/50 border-2 border-slate-600/50 rounded-2xl p-4 text-center transition-all duration-300 hover:border-orange-500/50 hover:bg-slate-700/50 h-full overflow-hidden">
+                                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-yellow-500/0 group-hover:from-orange-500/10 group-hover:to-yellow-500/10 transition-all duration-300"></div>
+                                            <div class="relative z-10">
+                                                <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=200&h=150&fit=crop" alt="Дом" class="w-full h-24 sm:h-28 object-cover rounded-xl mb-3">
+                                                <p class="font-semibold text-white text-sm">Дом / Коттедж</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="quiz-option cursor-pointer group">
+                                        <input type="radio" name="object_type" value="industrial" class="hidden">
+                                        <div class="quiz-card-new relative bg-slate-800/50 border-2 border-slate-600/50 rounded-2xl p-4 text-center transition-all duration-300 hover:border-orange-500/50 hover:bg-slate-700/50 h-full overflow-hidden">
+                                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-yellow-500/0 group-hover:from-orange-500/10 group-hover:to-yellow-500/10 transition-all duration-300"></div>
+                                            <div class="relative z-10">
+                                                <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=200&h=150&fit=crop" alt="Промышленный" class="w-full h-24 sm:h-28 object-cover rounded-xl mb-3">
+                                                <p class="font-semibold text-white text-sm">Промышленный</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="quiz-option cursor-pointer group">
+                                        <input type="radio" name="object_type" value="village" class="hidden">
+                                        <div class="quiz-card-new relative bg-slate-800/50 border-2 border-slate-600/50 rounded-2xl p-4 text-center transition-all duration-300 hover:border-orange-500/50 hover:bg-slate-700/50 h-full overflow-hidden">
+                                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-yellow-500/0 group-hover:from-orange-500/10 group-hover:to-yellow-500/10 transition-all duration-300"></div>
+                                            <div class="relative z-10">
+                                                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=200&h=150&fit=crop" alt="СНТ" class="w-full h-24 sm:h-28 object-cover rounded-xl mb-3">
+                                                <p class="font-semibold text-white text-sm">СНТ / Посёлок</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="quiz-option cursor-pointer group">
+                                        <input type="radio" name="object_type" value="other" class="hidden">
+                                        <div class="quiz-card-new relative bg-slate-800/50 border-2 border-slate-600/50 rounded-2xl p-4 text-center transition-all duration-300 hover:border-orange-500/50 hover:bg-slate-700/50 h-full overflow-hidden">
+                                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-yellow-500/0 group-hover:from-orange-500/10 group-hover:to-yellow-500/10 transition-all duration-300"></div>
+                                            <div class="relative z-10">
+                                                <div class="w-full h-24 sm:h-28 bg-slate-700/50 rounded-xl mb-3 flex items-center justify-center">
+                                                    <i class="fas fa-question text-4xl text-slate-400"></i>
+                                                </div>
+                                                <p class="font-semibold text-white text-sm">Другой объект</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Step 4: Equipment -->
+                            <div class="quiz-step hidden" data-step="4">
+                                <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-6 sm:mb-8 px-2">
+                                    <span class="text-white">У вас уже установлено</span>
+                                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400"> газовое оборудование?</span>
+                                </h3>
+                                <div class="grid grid-cols-3 gap-3 sm:gap-4 max-w-lg mx-auto">
+                                    <label class="quiz-option cursor-pointer group">
+                                        <input type="radio" name="equipment" value="yes" class="hidden">
+                                        <div class="quiz-card-new relative bg-slate-800/50 border-2 border-slate-600/50 rounded-2xl p-4 sm:p-6 text-center transition-all duration-300 hover:border-green-500/50 hover:bg-slate-700/50 h-full overflow-hidden min-h-[100px] sm:min-h-[130px] flex flex-col justify-center">
+                                            <div class="absolute inset-0 bg-gradient-to-br from-green-500/0 to-emerald-500/0 group-hover:from-green-500/10 group-hover:to-emerald-500/10 transition-all duration-300"></div>
+                                            <div class="relative z-10">
+                                                <div class="w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-2 sm:mb-3 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shadow-lg shadow-green-500/30">
+                                                    <i class="fas fa-check text-white text-xl sm:text-2xl"></i>
+                                                </div>
+                                                <p class="font-semibold text-white text-sm sm:text-base">Да</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="quiz-option cursor-pointer group">
+                                        <input type="radio" name="equipment" value="no" class="hidden">
+                                        <div class="quiz-card-new relative bg-slate-800/50 border-2 border-slate-600/50 rounded-2xl p-4 sm:p-6 text-center transition-all duration-300 hover:border-red-500/50 hover:bg-slate-700/50 h-full overflow-hidden min-h-[100px] sm:min-h-[130px] flex flex-col justify-center">
+                                            <div class="absolute inset-0 bg-gradient-to-br from-red-500/0 to-rose-500/0 group-hover:from-red-500/10 group-hover:to-rose-500/10 transition-all duration-300"></div>
+                                            <div class="relative z-10">
+                                                <div class="w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-2 sm:mb-3 rounded-xl bg-gradient-to-br from-red-500 to-rose-600 flex items-center justify-center shadow-lg shadow-red-500/30">
+                                                    <i class="fas fa-times text-white text-xl sm:text-2xl"></i>
+                                                </div>
+                                                <p class="font-semibold text-white text-sm sm:text-base">Нет</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="quiz-option cursor-pointer group">
+                                        <input type="radio" name="equipment" value="unknown" class="hidden">
+                                        <div class="quiz-card-new relative bg-slate-800/50 border-2 border-slate-600/50 rounded-2xl p-4 sm:p-6 text-center transition-all duration-300 hover:border-amber-500/50 hover:bg-slate-700/50 h-full overflow-hidden min-h-[100px] sm:min-h-[130px] flex flex-col justify-center">
+                                            <div class="absolute inset-0 bg-gradient-to-br from-amber-500/0 to-yellow-500/0 group-hover:from-amber-500/10 group-hover:to-yellow-500/10 transition-all duration-300"></div>
+                                            <div class="relative z-10">
+                                                <div class="w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-2 sm:mb-3 rounded-xl bg-gradient-to-br from-amber-500 to-yellow-600 flex items-center justify-center shadow-lg shadow-amber-500/30">
+                                                    <i class="fas fa-question text-white text-xl sm:text-2xl"></i>
+                                                </div>
+                                                <p class="font-semibold text-white text-sm sm:text-base">Не знаю</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Step 5: Previous steps -->
+                            <div class="quiz-step hidden" data-step="5">
+                                <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-6 sm:mb-8 px-2">
+                                    <span class="text-white">Вы уже предпринимали шаги</span>
+                                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> по подключению?</span>
+                                </h3>
+                                <div class="grid grid-cols-3 gap-3 sm:gap-4 max-w-lg mx-auto">
+                                    <label class="quiz-option cursor-pointer group">
+                                        <input type="radio" name="steps" value="yes" class="hidden">
+                                        <div class="quiz-card-new relative bg-slate-800/50 border-2 border-slate-600/50 rounded-2xl p-4 sm:p-6 text-center transition-all duration-300 hover:border-green-500/50 hover:bg-slate-700/50 h-full overflow-hidden min-h-[100px] sm:min-h-[130px] flex flex-col justify-center">
+                                            <div class="absolute inset-0 bg-gradient-to-br from-green-500/0 to-emerald-500/0 group-hover:from-green-500/10 group-hover:to-emerald-500/10 transition-all duration-300"></div>
+                                            <div class="relative z-10">
+                                                <div class="w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-2 sm:mb-3 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shadow-lg shadow-green-500/30">
+                                                    <i class="fas fa-clipboard-check text-white text-xl sm:text-2xl"></i>
+                                                </div>
+                                                <p class="font-semibold text-white text-sm sm:text-base">Да</p>
+                                                <p class="text-xs text-slate-400 mt-1 hidden sm:block">Есть документы</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="quiz-option cursor-pointer group">
+                                        <input type="radio" name="steps" value="no" class="hidden">
+                                        <div class="quiz-card-new relative bg-slate-800/50 border-2 border-slate-600/50 rounded-2xl p-4 sm:p-6 text-center transition-all duration-300 hover:border-blue-500/50 hover:bg-slate-700/50 h-full overflow-hidden min-h-[100px] sm:min-h-[130px] flex flex-col justify-center">
+                                            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-indigo-500/0 group-hover:from-blue-500/10 group-hover:to-indigo-500/10 transition-all duration-300"></div>
+                                            <div class="relative z-10">
+                                                <div class="w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-2 sm:mb-3 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/30">
+                                                    <i class="fas fa-rocket text-white text-xl sm:text-2xl"></i>
+                                                </div>
+                                                <p class="font-semibold text-white text-sm sm:text-base">Нет</p>
+                                                <p class="text-xs text-slate-400 mt-1 hidden sm:block">С нуля</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="quiz-option cursor-pointer group">
+                                        <input type="radio" name="steps" value="unknown" class="hidden">
+                                        <div class="quiz-card-new relative bg-slate-800/50 border-2 border-slate-600/50 rounded-2xl p-4 sm:p-6 text-center transition-all duration-300 hover:border-purple-500/50 hover:bg-slate-700/50 h-full overflow-hidden min-h-[100px] sm:min-h-[130px] flex flex-col justify-center">
+                                            <div class="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-pink-500/0 group-hover:from-purple-500/10 group-hover:to-pink-500/10 transition-all duration-300"></div>
+                                            <div class="relative z-10">
+                                                <div class="w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-2 sm:mb-3 rounded-xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center shadow-lg shadow-purple-500/30">
+                                                    <i class="fas fa-question text-white text-xl sm:text-2xl"></i>
+                                                </div>
+                                                <p class="font-semibold text-white text-sm sm:text-base">Не знаю</p>
+                                                <p class="text-xs text-slate-400 mt-1 hidden sm:block">Нужна консультация</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Step 6: Contact form -->
+                            <div class="quiz-step hidden" data-step="6">
+                                <div class="text-center mb-6 sm:mb-8">
+                                    <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shadow-lg shadow-green-500/30 animate-pulse">
+                                        <i class="fas fa-check text-white text-2xl sm:text-3xl"></i>
+                                    </div>
+                                    <h3 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
+                                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">Отлично!</span>
+                                        <span class="text-white"> Почти готово</span>
+                                    </h3>
+                                    <p class="text-sm sm:text-base text-slate-300">Наши специалисты уже приступили к расчётам</p>
+                                    <p class="text-xs sm:text-sm text-slate-400 mt-2">Оставьте контакты для получения персонального предложения</p>
+                                </div>
+                                <div class="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
+                                    <form id="quizForm" class="space-y-3 sm:space-y-4">
+                                        <div class="relative">
+                                            <i class="fas fa-user absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                                            <input type="text" name="name" placeholder="Ваше имя" required
+                                                class="w-full pl-11 pr-4 py-3 sm:py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition text-sm sm:text-base">
+                                        </div>
+                                        <div class="relative">
+                                            <i class="fas fa-phone absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                                            <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required
+                                                class="w-full pl-11 pr-4 py-3 sm:py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition text-sm sm:text-base">
+                                        </div>
+                                        <div class="flex items-start gap-2 sm:gap-3">
+                                            <input type="checkbox" id="quizAgree" class="mt-1 accent-orange-500" checked required>
+                                            <label for="quizAgree" class="text-xs sm:text-sm text-slate-400">
+                                                Даю согласие на <a href="#" class="text-orange-400 underline hover:text-orange-300">обработку персональных данных</a>
+                                            </label>
+                                        </div>
+                                        <button type="submit" class="w-full relative overflow-hidden bg-gradient-to-r from-orange-500 to-yellow-500 text-white py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base md:text-lg hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300 group">
+                                            <span class="relative z-10 flex items-center justify-center gap-2">
+                                                <span>ПОЛУЧИТЬ РАСЧЁТ</span>
+                                                <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                                            </span>
+                                            <div class="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                        </button>
+                                    </form>
+                                    <div class="text-center hidden md:flex flex-col items-center justify-center">
+                                        <div class="relative">
+                                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-full blur-2xl"></div>
+                                            <div class="relative w-32 h-32 border-4 border-dashed border-slate-600 rounded-full flex items-center justify-center">
+                                                <div class="text-center">
+                                                    <i class="fas fa-gift text-4xl text-orange-400 mb-2"></i>
+                                                    <p class="text-xs text-slate-400">Бонус</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="text-sm text-slate-300 mt-4">Бесплатная консультация<br>при заявке сегодня</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <div class="flex flex-col sm:flex-row justify-between gap-3 mt-6 sm:mt-8" id="quizNavigation">
+                            <button type="button" id="quizPrev" class="hidden group bg-slate-700/50 border border-slate-600/50 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold hover:bg-slate-600/50 hover:border-slate-500/50 transition-all order-2 sm:order-1">
+                                <span class="flex items-center justify-center gap-2">
+                                    <i class="fas fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
+                                    <span>НАЗАД</span>
+                                </span>
+                            </button>
+                            <button type="button" id="quizNext" class="sm:ml-auto group relative overflow-hidden bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-xl font-bold hover:shadow-lg hover:shadow-orange-500/30 transition-all order-1 sm:order-2">
+                                <span class="relative z-10 flex items-center justify-center gap-2">
+                                    <span>ДАЛЕЕ</span>
+                                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                                </span>
+                                <div class="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="advantages" class="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-48 sm:w-96 h-48 sm:h-96 bg-orange-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-48 sm:w-96 h-48 sm:h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-8 sm:mb-12 md:mb-16">
+                <span class="inline-block bg-orange-500/20 text-orange-400 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">Почему мы</span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">Наши преимущества</h2>
+                <p class="text-sm sm:text-base md:text-xl text-gray-400 max-w-2xl mx-auto px-4">Работаем на результат и дорожим репутацией каждый день</p>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+                <div class="text-center group">
+                    <div class="w-14 h-14 sm:w-20 sm:h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-orange-500/30">
+                        <i class="fas fa-award text-white text-xl sm:text-3xl"></i>
+                    </div>
+                    <h3 class="text-sm sm:text-xl font-bold text-white mb-1 sm:mb-3">Лицензии и допуски</h3>
+                    <p class="text-xs sm:text-base text-gray-400">Все необходимые разрешения на выполнение газоопасных работ</p>
+                </div>
+
+                <div class="text-center group">
+                    <div class="w-14 h-14 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-blue-500/30">
+                        <i class="fas fa-user-tie text-white text-xl sm:text-3xl"></i>
+                    </div>
+                    <h3 class="text-sm sm:text-xl font-bold text-white mb-1 sm:mb-3">Опытные мастера</h3>
+                    <p class="text-xs sm:text-base text-gray-400">Специалисты с опытом от 10 лет</p>
+                </div>
+
+                <div class="text-center group">
+                    <div class="w-14 h-14 sm:w-20 sm:h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-green-500/30">
+                        <i class="fas fa-ruble-sign text-white text-xl sm:text-3xl"></i>
+                    </div>
+                    <h3 class="text-sm sm:text-xl font-bold text-white mb-1 sm:mb-3">Фиксированные цены</h3>
+                    <p class="text-xs sm:text-base text-gray-400">Стоимость прописана в договоре</p>
+                </div>
+
+                <div class="text-center group">
+                    <div class="w-14 h-14 sm:w-20 sm:h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-purple-500/30">
+                        <i class="fas fa-shield-alt text-white text-xl sm:text-3xl"></i>
+                    </div>
+                    <h3 class="text-sm sm:text-xl font-bold text-white mb-1 sm:mb-3">Гарантия 5 лет</h3>
+                    <p class="text-xs sm:text-base text-gray-400">Официальная гарантия на работы</p>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="mt-10 sm:mt-16 md:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
+                <div class="text-center">
+                    <p class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600 mb-1 sm:mb-2">14+</p>
+                    <p class="text-xs sm:text-base text-gray-400">лет на рынке</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 mb-1 sm:mb-2">2500+</p>
+                    <p class="text-xs sm:text-base text-gray-400">выполненных проектов</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600 mb-1 sm:mb-2">98%</p>
+                    <p class="text-xs sm:text-base text-gray-400">довольных клиентов</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 mb-1 sm:mb-2">50+</p>
+                    <p class="text-xs sm:text-base text-gray-400">специалистов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section id="steps" class="py-12 sm:py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8 sm:mb-12 md:mb-16">
+                <span class="inline-block bg-orange-100 text-orange-600 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">Как мы работаем</span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-3 sm:mb-4">Этапы газификации</h2>
+                <p class="text-sm sm:text-base md:text-xl text-gray-500 max-w-2xl mx-auto px-4">Прозрачный процесс от первого звонка до запуска газа</p>
+            </div>
+
+            <!-- Mobile: Vertical Timeline -->
+            <div class="md:hidden relative">
+                <!-- Vertical Line -->
+                <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-orange-500 via-purple-500 to-green-500"></div>
+
+                <div class="space-y-6">
+                    <!-- Step 1 -->
+                    <div class="relative flex items-start gap-4 pl-2">
+                        <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg shadow-orange-500/30 flex-shrink-0 z-10 ring-4 ring-white">
+                            1
+                        </div>
+                        <div class="pt-1">
+                            <h3 class="font-bold text-gray-800 mb-1">Заявка и консультация</h3>
+                            <p class="text-gray-500 text-sm">Вы оставляете заявку, мы перезваниваем в течение 15 минут</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative flex items-start gap-4 pl-2">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg shadow-blue-500/30 flex-shrink-0 z-10 ring-4 ring-white">
+                            2
+                        </div>
+                        <div class="pt-1">
+                            <h3 class="font-bold text-gray-800 mb-1">Выезд специалиста</h3>
+                            <p class="text-gray-500 text-sm">Инженер приезжает, делает замеры и расчёты на месте</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative flex items-start gap-4 pl-2">
+                        <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg shadow-purple-500/30 flex-shrink-0 z-10 ring-4 ring-white">
+                            3
+                        </div>
+                        <div class="pt-1">
+                            <h3 class="font-bold text-gray-800 mb-1">Проектирование</h3>
+                            <p class="text-gray-500 text-sm">Разрабатываем проект и получаем все согласования</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="relative flex items-start gap-4 pl-2">
+                        <div class="w-10 h-10 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg shadow-cyan-500/30 flex-shrink-0 z-10 ring-4 ring-white">
+                            4
+                        </div>
+                        <div class="pt-1">
+                            <h3 class="font-bold text-gray-800 mb-1">Монтажные работы</h3>
+                            <p class="text-gray-500 text-sm">Монтаж газопровода и установка оборудования</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="relative flex items-start gap-4 pl-2">
+                        <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg shadow-green-500/30 flex-shrink-0 z-10 ring-4 ring-white">
+                            5
+                        </div>
+                        <div class="pt-1">
+                            <h3 class="font-bold text-gray-800 mb-1">Сдача и запуск</h3>
+                            <p class="text-gray-500 text-sm">Сдаём объект в эксплуатацию и запускаем газ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop: Horizontal Timeline -->
+            <div class="hidden md:block relative">
+                <!-- Connection Line -->
+                <div class="hidden lg:block absolute top-8 left-[10%] right-[10%] h-1 bg-gradient-to-r from-orange-500 via-blue-500 to-green-500 z-0"></div>
+
+                <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8">
+                    <!-- Step 1 -->
+                    <div class="relative text-center">
+                        <div class="w-14 lg:w-16 h-14 lg:h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 lg:mb-6 text-white text-xl lg:text-2xl font-bold shadow-lg shadow-orange-500/30 relative z-10 ring-4 ring-white">
+                            1
+                        </div>
+                        <h3 class="text-base lg:text-lg font-bold text-gray-800 mb-2">Заявка и консультация</h3>
+                        <p class="text-gray-500 text-sm">Вы оставляете заявку, мы перезваниваем</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative text-center">
+                        <div class="w-14 lg:w-16 h-14 lg:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 lg:mb-6 text-white text-xl lg:text-2xl font-bold shadow-lg shadow-blue-500/30 relative z-10 ring-4 ring-white">
+                            2
+                        </div>
+                        <h3 class="text-base lg:text-lg font-bold text-gray-800 mb-2">Выезд специалиста</h3>
+                        <p class="text-gray-500 text-sm">Инженер делает замеры и расчёты</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative text-center">
+                        <div class="w-14 lg:w-16 h-14 lg:h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 lg:mb-6 text-white text-xl lg:text-2xl font-bold shadow-lg shadow-purple-500/30 relative z-10 ring-4 ring-white">
+                            3
+                        </div>
+                        <h3 class="text-base lg:text-lg font-bold text-gray-800 mb-2">Проектирование</h3>
+                        <p class="text-gray-500 text-sm">Разрабатываем проект и согласования</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="relative text-center">
+                        <div class="w-14 lg:w-16 h-14 lg:h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4 lg:mb-6 text-white text-xl lg:text-2xl font-bold shadow-lg shadow-cyan-500/30 relative z-10 ring-4 ring-white">
+                            4
+                        </div>
+                        <h3 class="text-base lg:text-lg font-bold text-gray-800 mb-2">Монтажные работы</h3>
+                        <p class="text-gray-500 text-sm">Монтаж газопровода и оборудования</p>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="relative text-center md:col-span-3 lg:col-span-1">
+                        <div class="w-14 lg:w-16 h-14 lg:h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 lg:mb-6 text-white text-xl lg:text-2xl font-bold shadow-lg shadow-green-500/30 relative z-10 ring-4 ring-white">
+                            5
+                        </div>
+                        <h3 class="text-base lg:text-lg font-bold text-gray-800 mb-2">Сдача и запуск</h3>
+                        <p class="text-gray-500 text-sm">Сдаём объект и запускаем газ</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-8 sm:mt-10 md:mt-12">
+                <button onclick="openModal()" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base md:text-lg hover:shadow-2xl hover:shadow-orange-500/30 transition-all duration-300 hover:-translate-y-1">
+                    Начать газификацию
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-gray-100 to-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8 sm:mb-12 md:mb-16">
+                <span class="inline-block bg-orange-100 text-orange-600 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">Портфолио</span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-3 sm:mb-4">НАШИ РАБОТЫ</h2>
+                <p class="text-sm sm:text-base md:text-xl text-gray-500 max-w-2xl mx-auto px-4">Реальные фотографии выполненных проектов газификации</p>
+            </div>
+
+            <!-- Photo Grid - газовые работы -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 md:gap-4">
+                <!-- Row 1 -->
+                <div class="group relative overflow-hidden rounded-xl cursor-pointer" onclick="openLightbox(this)">
+                    <img src="images/1.jpg" alt="Газификация объекта" class="w-full h-40 md:h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl cursor-pointer" onclick="openLightbox(this)">
+                    <img src="images/2.jpg" alt="Монтаж газопровода" class="w-full h-40 md:h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl cursor-pointer" onclick="openLightbox(this)">
+                    <img src="images/3.jpg" alt="Газовое оборудование" class="w-full h-40 md:h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl cursor-pointer" onclick="openLightbox(this)">
+                    <img src="images/4.jpg" alt="Газификация коттеджа" class="w-full h-40 md:h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="group relative overflow-hidden rounded-xl cursor-pointer" onclick="openLightbox(this)">
+                    <img src="images/5.jpg" alt="Прокладка труб" class="w-full h-40 md:h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl cursor-pointer" onclick="openLightbox(this)">
+                    <img src="images/6.jpg" alt="Подключение газа" class="w-full h-40 md:h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl cursor-pointer" onclick="openLightbox(this)">
+                    <img src="images/7.jpg" alt="Газовый котёл" class="w-full h-40 md:h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl cursor-pointer" onclick="openLightbox(this)">
+                    <img src="images/8.jpg" alt="Газификация дачи" class="w-full h-40 md:h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="group relative overflow-hidden rounded-xl cursor-pointer" onclick="openLightbox(this)">
+                    <img src="images/9.jpg" alt="Монтажные работы" class="w-full h-40 md:h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl cursor-pointer" onclick="openLightbox(this)">
+                    <img src="images/10.jpg" alt="Установка оборудования" class="w-full h-40 md:h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl cursor-pointer" onclick="openLightbox(this)">
+                    <img src="images/11.jpg" alt="Газовые работы" class="w-full h-40 md:h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl cursor-pointer" onclick="openLightbox(this)">
+                    <img src="images/12.jpg" alt="Завершённый проект" class="w-full h-40 md:h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-8 sm:mt-10 md:mt-12">
+                <button onclick="openModal()" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base md:text-lg hover:shadow-2xl hover:shadow-orange-500/30 transition-all duration-300 hover:-translate-y-1">
+                    <i class="fas fa-images mr-2"></i>
+                    Хотите так же? Оставьте заявку!
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox with Navigation -->
+    <div id="lightbox" class="fixed inset-0 z-50 hidden bg-black/95 flex items-center justify-center p-4">
+        <!-- Close Button -->
+        <button onclick="closeLightbox()" class="absolute top-4 right-4 z-10 text-white/70 hover:text-white text-3xl transition">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <!-- Previous Button -->
+        <button onclick="prevImage()" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all">
+            <i class="fas fa-chevron-left text-lg sm:text-xl"></i>
+        </button>
+
+        <!-- Next Button -->
+        <button onclick="nextImage()" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all">
+            <i class="fas fa-chevron-right text-lg sm:text-xl"></i>
+        </button>
+
+        <!-- Image Counter -->
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 bg-black/50 backdrop-blur-sm px-4 py-2 rounded-full text-white/80 text-sm">
+            <span id="lightboxCounter">1 / 12</span>
+        </div>
+
+        <!-- Image Container (for swipe) -->
+        <div id="lightboxContainer" class="w-full h-full flex items-center justify-center touch-pan-y">
+            <img id="lightboxImg" src="" alt="" class="max-w-full max-h-[85vh] rounded-lg shadow-2xl select-none pointer-events-none">
+        </div>
+    </div>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-12 sm:py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8 sm:mb-12 md:mb-16">
+                <span class="inline-block bg-orange-100 text-orange-600 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">Отзывы</span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-3 sm:mb-4">Что говорят наши клиенты</h2>
+                <p class="text-sm sm:text-base md:text-xl text-gray-500 max-w-2xl mx-auto px-4">Реальные отзывы от владельцев домов, которым мы помогли с газификацией</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                <!-- Review 1 -->
+                <div class="bg-gray-50 rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 border border-gray-100">
+                    <div class="flex items-center gap-1 mb-3 sm:mb-4">
+                        <i class="fas fa-star text-yellow-400 text-sm sm:text-base"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm sm:text-base"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm sm:text-base"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm sm:text-base"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm sm:text-base"></i>
+                    </div>
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">"Обратились за газификацией загородного дома. Всё сделали качественно и в срок. Особенно порадовало, что все согласования взяли на себя — нам не пришлось бегать по инстанциям."</p>
+                    <div class="flex items-center gap-3 sm:gap-4">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base">
+                            АК
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800 text-sm sm:text-base">Андрей Козлов</p>
+                            <p class="text-xs sm:text-sm text-gray-500">Одинцово, МО</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-gray-50 rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 border border-gray-100">
+                    <div class="flex items-center gap-1 mb-3 sm:mb-4">
+                        <i class="fas fa-star text-yellow-400 text-sm sm:text-base"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm sm:text-base"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm sm:text-base"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm sm:text-base"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm sm:text-base"></i>
+                    </div>
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">"Долго искали надёжную компанию для подключения газа. ГазМастер порекомендовали соседи. Результатом очень довольны — работают профессионально, цены адекватные."</p>
+                    <div class="flex items-center gap-3 sm:gap-4">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base">
+                            ЕС
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800 text-sm sm:text-base">Елена Смирнова</p>
+                            <p class="text-xs sm:text-sm text-gray-500">Красногорск, МО</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-gray-50 rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 border border-gray-100">
+                    <div class="flex items-center gap-1 mb-3 sm:mb-4">
+                        <i class="fas fa-star text-yellow-400 text-sm sm:text-base"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm sm:text-base"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm sm:text-base"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm sm:text-base"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm sm:text-base"></i>
+                    </div>
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">"Заказывал проект газоснабжения и монтаж котельной. Ребята знают своё дело! Всё согласовали с первого раза, никаких переделок. Рекомендую всем знакомым."</p>
+                    <div class="flex items-center gap-3 sm:gap-4">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base">
+                            МП
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800 text-sm sm:text-base">Михаил Петров</p>
+                            <p class="text-xs sm:text-sm text-gray-500">Истра, МО</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 sm:py-16 md:py-24 bg-gradient-to-r from-orange-500 to-orange-600 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-48 sm:w-96 h-48 sm:h-96 bg-white/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-48 sm:w-96 h-48 sm:h-96 bg-white/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">Готовы начать газификацию?</h2>
+            <p class="text-sm sm:text-base md:text-xl text-white/90 mb-6 sm:mb-8 md:mb-10 max-w-2xl mx-auto px-4">Оставьте заявку прямо сейчас и получите бесплатный расчёт стоимости работ для вашего объекта</p>
+
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
+                <button onclick="openModal()" class="bg-white text-orange-600 px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base md:text-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                    Получить расчёт бесплатно
+                </button>
+                <a href="tel:+74951234567" class="flex items-center justify-center gap-2 sm:gap-3 bg-white/20 backdrop-blur-sm border-2 border-white/50 text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base md:text-lg hover:bg-white/30 transition-all">
+                    <i class="fas fa-phone-alt"></i>
+                    +7 (495) 123-45-67
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contacts" class="py-12 sm:py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
+                <div>
+                    <span class="inline-block bg-orange-500/20 text-orange-400 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">Контакты</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">Свяжитесь с нами</h2>
+                    <p class="text-sm sm:text-base text-gray-400 mb-6 sm:mb-8">Мы всегда готовы ответить на ваши вопросы и помочь с газификацией вашего дома</p>
+
+                    <div class="space-y-4 sm:space-y-6">
+                        <div class="flex items-start gap-3 sm:gap-4">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-orange-500/20 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone-alt text-orange-400 text-sm sm:text-base"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-xs sm:text-sm mb-1">Телефон</p>
+                                <a href="tel:+74951234567" class="text-base sm:text-lg md:text-xl font-bold text-white hover:text-orange-400 transition">+7 (495) 123-45-67</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 sm:gap-4">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-orange-500/20 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-orange-400 text-sm sm:text-base"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-xs sm:text-sm mb-1">Email</p>
+                                <a href="mailto:info@gazmaster.ru" class="text-base sm:text-lg md:text-xl font-bold text-white hover:text-orange-400 transition break-all">info@gazmaster.ru</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 sm:gap-4">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-orange-500/20 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-orange-400 text-sm sm:text-base"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-xs sm:text-sm mb-1">Адрес</p>
+                                <p class="text-base sm:text-lg md:text-xl font-bold text-white">г. Москва, ул. Примерная, д. 123</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 sm:gap-4">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-orange-500/20 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-clock text-orange-400 text-sm sm:text-base"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-xs sm:text-sm mb-1">Режим работы</p>
+                                <p class="text-base sm:text-lg md:text-xl font-bold text-white">Пн-Вс: 8:00 - 20:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-3 sm:gap-4 mt-6 sm:mt-8">
+                        <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 bg-gray-800 rounded-lg sm:rounded-xl flex items-center justify-center text-gray-400 hover:bg-orange-500 hover:text-white transition">
+                            <i class="fab fa-telegram text-lg sm:text-xl"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 bg-gray-800 rounded-lg sm:rounded-xl flex items-center justify-center text-gray-400 hover:bg-orange-500 hover:text-white transition">
+                            <i class="fab fa-whatsapp text-lg sm:text-xl"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 bg-gray-800 rounded-lg sm:rounded-xl flex items-center justify-center text-gray-400 hover:bg-orange-500 hover:text-white transition">
+                            <i class="fab fa-vk text-lg sm:text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-gray-800 rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Напишите нам</h3>
+                    <form id="contactForm" class="space-y-3 sm:space-y-4">
+                        <div>
+                            <input type="text" name="name" placeholder="Ваше имя" required
+                                class="w-full px-4 sm:px-5 py-3 sm:py-4 bg-gray-700 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition text-sm sm:text-base">
+                        </div>
+                        <div>
+                            <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required
+                                class="w-full px-4 sm:px-5 py-3 sm:py-4 bg-gray-700 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition text-sm sm:text-base">
+                        </div>
+                        <div>
+                            <input type="email" name="email" placeholder="Email"
+                                class="w-full px-4 sm:px-5 py-3 sm:py-4 bg-gray-700 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition text-sm sm:text-base">
+                        </div>
+                        <div>
+                            <textarea name="message" rows="4" placeholder="Ваше сообщение"
+                                class="w-full px-4 sm:px-5 py-3 sm:py-4 bg-gray-700 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition resize-none text-sm sm:text-base"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base md:text-lg hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300">
+                            Отправить сообщение
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-6 sm:py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <div class="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg sm:rounded-xl flex items-center justify-center">
+                        <i class="fas fa-fire text-white text-sm sm:text-base"></i>
+                    </div>
+                    <span class="text-base sm:text-lg font-bold text-white">ГазМастер</span>
+                </div>
+                <p class="text-gray-500 text-xs sm:text-sm order-3 md:order-2">© 2024 ГазМастер. Все права защищены.</p>
+                <div class="flex flex-wrap justify-center gap-4 sm:gap-6 order-2 md:order-3">
+                    <a href="#" class="text-gray-500 hover:text-orange-400 transition text-xs sm:text-sm">Политика конфиденциальности</a>
+                    <a href="#" class="text-gray-500 hover:text-orange-400 transition text-xs sm:text-sm">Договор оферты</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="flex items-center justify-center min-h-screen p-3 sm:p-4">
+            <div class="relative bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 max-w-md w-full shadow-2xl transform scale-95 opacity-0 transition-all duration-300" id="modalContent">
+                <button onclick="closeModal()" class="absolute top-3 right-3 sm:top-4 sm:right-4 text-gray-400 hover:text-gray-600 transition">
+                    <i class="fas fa-times text-lg sm:text-xl"></i>
+                </button>
+
+                <div class="text-center mb-4 sm:mb-6">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                        <i class="fas fa-fire text-white text-xl sm:text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Оставьте заявку</h3>
+                    <p class="text-sm sm:text-base text-gray-500" id="modalSubtitle">Мы перезвоним вам в течение 15 минут</p>
+                </div>
+
+                <form id="modalForm" class="space-y-3 sm:space-y-4">
+                    <input type="hidden" name="service" id="modalService" value="">
+                    <div>
+                        <input type="text" name="name" placeholder="Ваше имя" required
+                            class="w-full px-4 sm:px-5 py-3 sm:py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition text-sm sm:text-base">
+                    </div>
+                    <div>
+                        <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required
+                            class="w-full px-4 sm:px-5 py-3 sm:py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition text-sm sm:text-base">
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base md:text-lg hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300">
+                        Отправить заявку
+                    </button>
+                    <p class="text-center text-xs sm:text-sm text-gray-400">
+                        Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeSuccessModal()"></div>
+        <div class="flex items-center justify-center min-h-screen p-3 sm:p-4">
+            <div class="relative bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 max-w-md w-full shadow-2xl text-center" id="successModalContent">
+                <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                    <i class="fas fa-check text-white text-2xl sm:text-3xl"></i>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Заявка отправлена!</h3>
+                <p class="text-sm sm:text-base text-gray-500 mb-4 sm:mb-6">Наш специалист свяжется с вами в ближайшее время</p>
+                <button onclick="closeSuccessModal()" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl font-semibold text-sm sm:text-base hover:shadow-lg transition-all">
+                    Отлично!
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
