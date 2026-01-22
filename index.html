@@ -83,55 +83,60 @@
 
     <!-- Mobile Menu Premium (Full Screen Overlay) -->
     <div id="mobileMenu" class="mobile-menu-premium">
-        <!-- Floating Orbs -->
-        <div class="menu-orb menu-orb-1"></div>
-        <div class="menu-orb menu-orb-2"></div>
-        <div class="menu-orb menu-orb-3"></div>
+        <!-- Close Button -->
+        <button id="mobileMenuClose" class="mobile-menu-close" onclick="closeMobileMenu()">
+            <i class="fas fa-times"></i>
+        </button>
 
-        <!-- Navigation Links -->
-        <nav class="relative z-10 flex flex-col items-center">
-            <a href="#services" class="mobile-nav-link">
-                <span class="link-number">01</span>
-                Услуги
-            </a>
-            <a href="#quiz" class="mobile-nav-link">
-                <span class="link-number">02</span>
-                Расчёт
-            </a>
-            <a href="#advantages" class="mobile-nav-link">
-                <span class="link-number">03</span>
-                Преимущества
-            </a>
-            <a href="#steps" class="mobile-nav-link">
-                <span class="link-number">04</span>
-                Этапы работ
-            </a>
-            <a href="#portfolio" class="mobile-nav-link">
-                <span class="link-number">05</span>
-                Наши работы
-            </a>
-            <a href="#reviews" class="mobile-nav-link">
-                <span class="link-number">06</span>
-                Отзывы
-            </a>
-            <a href="#contacts" class="mobile-nav-link">
-                <span class="link-number">07</span>
-                Контакты
-            </a>
-        </nav>
+        <!-- Scrollable Content -->
+        <div class="mobile-menu-content">
+            <!-- Navigation Links -->
+            <nav class="mobile-menu-nav">
+                <a href="#services" class="mobile-nav-link">
+                    <i class="fas fa-wrench"></i>
+                    Услуги
+                </a>
+                <a href="#quiz" class="mobile-nav-link">
+                    <i class="fas fa-calculator"></i>
+                    Расчёт стоимости
+                </a>
+                <a href="#advantages" class="mobile-nav-link">
+                    <i class="fas fa-star"></i>
+                    Преимущества
+                </a>
+                <a href="#steps" class="mobile-nav-link">
+                    <i class="fas fa-list-ol"></i>
+                    Этапы работ
+                </a>
+                <a href="#portfolio" class="mobile-nav-link">
+                    <i class="fas fa-images"></i>
+                    Наши работы
+                </a>
+                <a href="#reviews" class="mobile-nav-link">
+                    <i class="fas fa-comments"></i>
+                    Отзывы
+                </a>
+                <a href="#contacts" class="mobile-nav-link">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Контакты
+                </a>
+            </nav>
 
-        <!-- Contact Info -->
-        <div class="mobile-menu-contact">
-            <a href="tel:+74951234567">+7 (495) 123-45-67</a>
-            <p>Ежедневно с 8:00 до 20:00</p>
-        </div>
+            <!-- Contact Info -->
+            <div class="mobile-menu-contact">
+                <a href="tel:+74951234567" class="mobile-menu-phone">
+                    <i class="fas fa-phone-alt"></i>
+                    +7 (495) 123-45-67
+                </a>
+                <p>Ежедневно с 8:00 до 20:00</p>
+            </div>
 
-        <!-- CTA Button -->
-        <div class="mobile-menu-cta">
-            <button onclick="openModal(); closeMobileMenu();">
-                <i class="fas fa-phone-alt mr-2"></i>
-                Заказать звонок
-            </button>
+            <!-- CTA Button -->
+            <div class="mobile-menu-cta">
+                <button onclick="openModal(); closeMobileMenu();">
+                    Заказать звонок
+                </button>
+            </div>
         </div>
     </div>
 
