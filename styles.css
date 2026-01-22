@@ -915,6 +915,12 @@ img {
     margin-left: auto;
 }
 
+@media (max-width: 640px) {
+    .btn-right {
+        justify-content: flex-end;
+    }
+}
+
 /* ==========================================
    PREMIUM NAVIGATION MENU
    ========================================== */
