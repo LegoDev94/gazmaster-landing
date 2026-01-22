@@ -898,13 +898,24 @@ img {
    SERVICE CARD FOOTER
    ========================================== */
 .service-card-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
     margin-top: auto;
     padding-top: 1rem;
     border-top: 1px solid #f3f4f6;
+    box-sizing: border-box;
+}
+
+.service-card-footer > span {
+    flex-shrink: 0;
+}
+
+.service-card-footer > button {
+    flex-shrink: 0;
+    margin-left: auto !important;
 }
 
 /* ==========================================
