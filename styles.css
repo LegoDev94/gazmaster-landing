@@ -552,24 +552,21 @@ input[type="tel"] {
     animation: shimmer 2s infinite;
 }
 
-/* New Quiz Card Styles (Dark Theme) */
+/* New Quiz Card Styles (Light Theme) */
 .quiz-card-new {
     transition: all 0.3s ease;
 }
 
 .quiz-card-new:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
+    border-color: #0e65a0 !important;
 }
 
-/* Selected Quiz Card (Dark Theme) */
+/* Selected Quiz Card (Light Theme) */
 .quiz-option input:checked + .quiz-card-new {
-    border-color: #f97316 !important;
-    background-color: rgba(249, 115, 22, 0.15) !important;
-    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.3), 0 8px 25px rgba(249, 115, 22, 0.2);
-}
-
-.quiz-option input:checked + .quiz-card-new .relative.z-10 > div:first-child {
-    transform: scale(1.1);
+    border-color: #fba626 !important;
+    background-color: #fffbeb !important;
+    box-shadow: 0 0 0 3px rgba(251, 166, 38, 0.3);
 }
 
 /* Quiz Floating Orbs Animation */
